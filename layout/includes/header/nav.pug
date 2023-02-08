@@ -1,0 +1,11 @@
+#nav
+  #nav-backdrop
+    .nav-layout.container
+      a.logo(href=url_for('/'))
+        if theme.nav.logo
+          img.site-logo(src=url_for(theme.nav.logo))
+        if theme.nav.display_title
+          span.site-name=config.title
+
+      if theme.menu
+        !=partial('includes/header/menu', {}, {cache: true})

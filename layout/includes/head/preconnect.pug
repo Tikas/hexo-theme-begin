@@ -1,0 +1,4 @@
+if theme.preconnect
+  each url in theme.preconnect
+    link(rel="dns-prefetch" href=url)
+    link(rel="preconnect" href=url)

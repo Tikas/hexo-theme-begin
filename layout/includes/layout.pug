@@ -1,0 +1,36 @@
+
+- var pageTitle = page.title || config.subtitle || ''
+- if (is_archive()) pageTitle = 'Archives'
+- if (is_tag()) pageTitle = 'Tag: ' + page.tag
+- if (is_category()) pageTitle = 'Category: ' + page.category
+- if (is_month()) pageTitle += ': ' + page.month + '/' + page.year
+- if (is_year()) pageTitle += ': ' + page.year
+- pageTitle += ' [ ' + config.title + ' ]'
+
+doctype html
+html(lang=config.language data-theme=theme.display_mode)
+  head
+    include ./head.pug
+  body
+    //- 过场动画预留位置
+
+    //- 页面背景
+    if theme.background
+      #page-background
+
+    //- 头部结构
+    include ./header/index.pug
+
+    if page.type !== '404'
+
+      main
+        if body
+          div!= body
+        else
+          block content
+
+      footer#footer
+        !=partial('includes/footer', {}, {cache: true})
+
+    else
+      include ./404.pug

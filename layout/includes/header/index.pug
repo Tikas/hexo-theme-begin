@@ -1,0 +1,9 @@
+
+header
+  !=partial('includes/header/nav', {}, {cache: true})
+
+script.
+  window.addEventListener('scroll', () => {
+    let header = document.querySelector('#nav')
+    header.classList.toggle('nav-scrolled', window.scrollY > 0)
+  })

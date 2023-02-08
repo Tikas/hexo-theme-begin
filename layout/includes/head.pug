@@ -1,0 +1,40 @@
+
+- var pageTitle = page.title || config.subtitle || ''
+- if (is_archive()) pageTitle = 'Archives'
+- if (is_tag()) pageTitle = 'Tag: ' + page.tag
+- if (is_category()) pageTitle = 'Category: ' + page.category
+- if (is_month()) pageTitle += ': ' + page.month + '/' + page.year
+- if (is_year()) pageTitle += ': ' + page.year
+- var isSubtitle = config.subtitle ? ' - ' + config.subtitle : ''
+- var tabTitle = is_home() || !pageTitle ? config.title + isSubtitle : pageTitle + ' - ' + config.title
+- var pageCopyright = config.copyright || config.author
+- var tabKeywords = is_home() ? config.keywords : page.keywords
+
+meta(charset='UTF-8')
+meta(http-equiv="content-language" content=config.language)
+meta(http-equiv="X-UA-Compatible" content="IE=edge")
+meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5")
+title=tabTitle
+meta(name="author" content=config.author)
+
+if (is_home())
+  meta(name="keywords" content=config.keywords)
+else if (page.keywords)
+  meta(name="keywords" content=page.keywords)
+
+meta(name="copyright" content=pageCopyright)
+meta(name="description" content=config.description)
+meta(name ="format-detection" content="telephone=no")
+
+//- TODO: open_graph
+
+!=favicon_tag(theme.favicon || config.favicon)
+
+//- 预解析
+!=partial('includes/head/preconnect', {}, {cache: true})
+
+//- CSS
+link(rel='stylesheet', href=url_for('/css/style.css'))
+
+//- 插入头部代码
+!=partial('includes/head/inject', {}, {cache: true})
