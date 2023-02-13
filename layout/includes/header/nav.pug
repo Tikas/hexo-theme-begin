@@ -9,3 +9,6 @@
 
       if theme.menu
         !=partial('includes/header/menu', {}, {cache: true})
+
+      if theme.nav_button.enable
+        !=partial('includes/header/nav-button', {}, {cache: true})

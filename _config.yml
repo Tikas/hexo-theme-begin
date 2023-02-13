@@ -2,17 +2,6 @@
 # html lang
 language: en
 
-# main menu navigation
-# 使用图标，请在链接后面 || 增加，示例：# Home: / || fas fa-home
-# 下拉菜单请在列表顶里增加，示例：# List||fas fa-list:
-menu:
-  # Home: / || fas fa-home
-  # List||fas fa-list:
-  #   Item1: /
-  #   Item2: /
-  # Link: /link/ || fas fa-link
-  # About: /about/ || fas fa-heart
-
 # Default display mode (设置网站默认显示模式)
 # light (default) / dark
 display_mode: light
@@ -33,7 +22,42 @@ inject:
 
 # Website Background
 background:
+  url: /
 
+############################### Navigation Bar ############################### > start
+# 注意事项：建议规范全站路径 URL 最后带一个 "/" 例如 "about/"
 nav:
-  logo:
-  display_title: true
+  logo: #logo 图片的链接路径
+  display_title: true #显示站点名称，默认为 true, 设置 false 为不显示
+
+# main menu navigation
+# 使用图标，请在链接后面 || 增加，示例：# Home: / || fas fa-home
+# 下拉菜单请在列表顶里增加，示例：# List||fas fa-list:
+menu:
+  Home: / || fas fa-home
+  List||fas fa-list:
+    Item1: /
+    Item2: /
+  Link: link/ || fas fa-link
+  About: about/ || fas fa-heart
+
+# 导航菜单的按钮设置
+nav_button:
+  enable: true #导航栏右侧按钮总开关，设置 false 为不显示，以下所有按钮开启了也不会显示
+  container:
+    enable: true #在导航栏显示内容按钮，设置 false 为不显示
+    title: Try for free
+    url: /
+  search: #TOTO: 待完成，此功能暂时还没做好
+    enable: false #在导航栏显示搜索按钮，设置 false 为不显示
+    title: Search...
+    icon: #搜索的图标，如果不设置，则使用自带的 svg 样式
+############################### Navigation Bar ############################### > end
+
+############################### Banner ############################### > start
+banner:
+  enable: true #首页轮播图，设置 false 为不显示
+  css: css/swiper.min.css
+  js: js/swiper.min.js
+
+############################### Banner ############################### > end

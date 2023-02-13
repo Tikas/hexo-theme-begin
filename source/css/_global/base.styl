@@ -99,9 +99,6 @@ body
   height: 10px
   margin: 2px 0 0 4px
 
-.menu-dropdown-svg
-  width: 8px
-
 .menu-link
   -webkit-user-select: none
   -moz-user-select: none
@@ -146,3 +143,32 @@ body
   width: 100%
   &:hover
     background-color #eee
+
+.nav-button-info-mobile
+  display: none
+
+.nav-button
+  -webkit-user-select: none
+  -moz-user-select: none
+  user-select: none
+  text-decoration: inherit
+  display: inline-block
+  text-align: center
+  font-weight: 500
+  padding: 6px 20px
+
+.container-button
+  --cta-button-background-color: unset
+  --cta-button-foreground-color: unset
+  border-radius: 99px
+  background: var(--cta-button-background-color)
+  color: var(--cta-button-foreground-color)
+  letter-spacing: -.5px
+
+.cta-blue
+  --cta-button-background-color: #0a84ff
+  --cta-button-foreground-color: #fff
+  &:hover
+    --cta-button-background-color: #046fdb
+  &:active
+    --cta-button-background-color: #2997ff

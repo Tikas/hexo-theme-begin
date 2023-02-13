@@ -1,0 +1,7 @@
+if (is_home()) && theme.banner.enable
+  script(src=url_for(theme.banner.js))
+
+//- 插入尾部代码
+if theme.inject.bottom
+  each item in theme.inject.bottom
+    !=item

@@ -22,6 +22,8 @@ html(lang=config.language data-theme=theme.display_mode)
     include ./header/index.pug
 
     if page.type !== '404'
+      if (is_home()) && theme.banner.enable
+        //- !=partial('_partial/banner', {}, {cache: true})
 
       main
         if body
@@ -34,3 +36,6 @@ html(lang=config.language data-theme=theme.display_mode)
 
     else
       include ./404.pug
+
+    //- 页尾 js 加载
+    include ./additional-js.pug

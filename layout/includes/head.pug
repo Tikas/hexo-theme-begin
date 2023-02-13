@@ -19,6 +19,8 @@ meta(name="author" content=config.author)
 
 if (is_home())
   meta(name="keywords" content=config.keywords)
+  if theme.banner.enable
+    link(rel='stylesheet', href=url_for(theme.banner.css))
 else if (page.keywords)
   meta(name="keywords" content=page.keywords)
 
