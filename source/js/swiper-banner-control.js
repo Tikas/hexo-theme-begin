@@ -6,13 +6,13 @@ var swiperBanner = new Swiper('.swiper-container', {
     loopFillGroupWithBlank: false,
     speed: 750,
     autoplay: {
-        delay: 9000,
+        delay: 8000,
         disableOnInteraction: false,
     },
-    navigation: {
-        nextEl: '.swiper-button.next',
-        prevEl: '.swiper-button.prev',
-    },
+    // navigation: {
+    //     nextEl: '.swiper-button.next',
+    //     prevEl: '.swiper-button.prev',
+    // },
     pagination: {
         el: '.swiper-pagination',
         dynamicBullets: true,

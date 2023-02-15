@@ -60,8 +60,8 @@ banner:
   css: css/swiper.min.css #swiper css
   js: js/swiper.min.js #swiper js
   control: js/swiper-banner-control.js #配置 swiper 的声明文件
-  prev_icon: #上一页的图标，如果不设置，则使用自带的 svg 样式
-  next_icon: #下一页的图标，如果不设置，则使用自带的 svg 样式
+  # prev_icon: #上一页的图标，如果不设置，则使用自带的 svg 样式
+  # next_icon: #下一页的图标，如果不设置，则使用自带的 svg 样式
   wrapper:
     # #轮播图设置参数介绍
     # - img: /img.jpg #电脑端显示的图片
@@ -70,6 +70,7 @@ banner:
     #     position: center #介绍信息所在位置: left (PC左边，移动端显示为上面), center (居中), right (PC右边，移动端显示为下面). 不设置则只显示图片、不显示介绍
     #     title: Getting #介绍主标题
     #     subtitle: Wit once bought is worth twice taught #介绍的副标题内容
+    #     white_title: false #标题的字体颜色是否为白色, false 为黑色, true 为白色
     #     button_title: Read more > #介绍按钮的标题，同按钮链接一样，为空则不显示按钮
     #     button_url: / #介绍按钮的链接，同按钮标题一样，为空则不显示按钮
     #第一个轮播图
@@ -79,6 +80,7 @@ banner:
         position: center
         title: Getting
         subtitle: Wit once bought is worth twice taught
+        white_title: false
         button_title: Read more >
         button_url: /
     #第二个轮播图
@@ -88,6 +90,7 @@ banner:
         position: left
         title: 阿甘正传
         subtitle: 生活就像一盒巧克力，你永远不知道下一个是什么
+        white_title: false
         button_title: 点击查看 >
         button_url: /
     #第三个轮播图
@@ -97,6 +100,7 @@ banner:
         position: right
         title: Actions
         subtitle: Actions speak louder than words
+        white_title: true
         button_title: Read more >
         button_url: /
 #如需要更多轮播图请自行复制上面的配置格式，注意缩进层次关系。

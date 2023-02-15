@@ -10,14 +10,17 @@
               .introduce
                 .container
                   div(class=item.introduce.position)
-                    p.introduce-title=item.introduce.title
-                    p.introduce-subtitle=item.introduce.subtitle
+                    - var whiteTitle = item.introduce.white_title ? 'font-white' : ''
+                    p.introduce-title(class=whiteTitle)=item.introduce.title
+                    p.introduce-subtitle(class=whiteTitle)=item.introduce.subtitle
                     if item.introduce.button_title && item.introduce.button_url
                       a.nav-button.cta-blue.container-button(href=url_for(item.introduce.button_url))
                         !=item.introduce.button_title
                         //- 按钮标题后面加 > 号，先使用文字解决
+
     //- 画面底部显示进度
     .swiper-pagination
+
     //- 两边的前后控件
     //- .swiper-button.prev
     //-   if theme.banner.prev_icon

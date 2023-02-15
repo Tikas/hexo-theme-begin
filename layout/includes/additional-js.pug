@@ -6,3 +6,9 @@ if (is_home()) && theme.banner.enable
 if theme.inject.bottom
   each item in theme.inject.bottom
     !=item
+
+script.
+  window.addEventListener('scroll', () => {
+    let header = document.querySelector('#nav');
+    header.classList.toggle('nav-scrolled', window.scrollY > 0);
+  })
