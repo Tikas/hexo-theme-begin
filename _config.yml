@@ -59,5 +59,44 @@ banner:
   enable: true #首页轮播图，设置 false 为不显示
   css: css/swiper.min.css
   js: js/swiper.min.js
-
+  prev_icon: #上一页的图标，如果不设置，则使用自带的 svg 样式
+  next_icon: #下一页的图标，如果不设置，则使用自带的 svg 样式
+  wrapper:
+    # #轮播图设置参数介绍
+    # - img: /img.jpg #电脑端显示的图片
+    #   mobile_img: https://github.com/mobile-img.jpg #手机端显示的图片，理应为移动端配图，不然会以电脑端的图片显示
+    #   introduce: #图片介绍的信息组，这个值不用填写
+    #     position: center #介绍信息所在位置: left (PC左边，移动端显示为上面), center (居中), right (PC右边，移动端显示为下面). 不设置则只显示图片、不显示介绍
+    #     title: Getting #介绍主标题
+    #     subtitle: Wit once bought is worth twice taught #介绍的副标题内容
+    #     button_title: Read more > #介绍按钮的标题，同按钮链接一样，为空则不显示按钮
+    #     button_url: / #介绍按钮的链接，同按钮标题一样，为空则不显示按钮
+    #第一个轮播图
+    - img: https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp
+      mobile_img: https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/014.webp
+      introduce:
+        position: center
+        title: Getting
+        subtitle: Wit once bought is worth twice taught
+        button_title: Read more >
+        button_url: /
+    #第二个轮播图
+    - img: https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/005.webp
+      mobile_img: https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/011.webp
+      introduce:
+        position: left
+        title: 阿甘正传
+        subtitle: 生活就像一盒巧克力，你永远不知道下一个是什么
+        button_title: 点击查看 >
+        button_url: /
+    #第三个轮播图
+    - img: https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/007.webp
+      mobile_img: https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp
+      introduce:
+        position: right
+        title: Actions
+        subtitle: Actions speak louder than words
+        button_title: Read more >
+        button_url: /
+#如需要更多轮播图请自行复制上面的配置格式，注意缩进层次关系。
 ############################### Banner ############################### > end

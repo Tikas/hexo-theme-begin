@@ -23,7 +23,7 @@ html(lang=config.language data-theme=theme.display_mode)
 
     if page.type !== '404'
       if (is_home()) && theme.banner.enable
-        //- !=partial('_partial/banner', {}, {cache: true})
+        include ./_partial/banner.pug
 
       main
         if body
