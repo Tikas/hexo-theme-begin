@@ -57,8 +57,9 @@ nav_button:
 ############################### Banner ############################### > start
 banner:
   enable: true #首页轮播图，设置 false 为不显示
-  css: css/swiper.min.css
-  js: js/swiper.min.js
+  css: css/swiper.min.css #swiper css
+  js: js/swiper.min.js #swiper js
+  control: js/swiper-banner-control.js #配置 swiper 的声明文件
   prev_icon: #上一页的图标，如果不设置，则使用自带的 svg 样式
   next_icon: #下一页的图标，如果不设置，则使用自带的 svg 样式
   wrapper:
