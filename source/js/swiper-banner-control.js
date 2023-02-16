@@ -6,7 +6,7 @@ var swiperBanner = new Swiper('.swiper-container', {
     loopFillGroupWithBlank: false,
     speed: 750,
     autoplay: {
-        delay: 8000,
+        delay: 9000,
         disableOnInteraction: false,
     },
     // navigation: {

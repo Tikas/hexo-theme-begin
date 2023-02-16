@@ -7,14 +7,14 @@
           .swiper-slide
             img.swiper-img(src=url_for(item.img) alt=item.introduce.title)
             if item.introduce.position
-              .introduce
-                .container
+              .container.box
+                .introduce
                   div(class=item.introduce.position)
                     - var whiteTitle = item.introduce.white_title ? 'font-white' : ''
                     p.introduce-title(class=whiteTitle)=item.introduce.title
                     p.introduce-subtitle(class=whiteTitle)=item.introduce.subtitle
                     if item.introduce.button_title && item.introduce.button_url
-                      a.nav-button.cta-blue.container-button(href=url_for(item.introduce.button_url))
+                      a.button-solid.cta-blue(class=whiteTitle href=url_for(item.introduce.button_url))
                         !=item.introduce.button_title
                         //- 按钮标题后面加 > 号，先使用文字解决
 
