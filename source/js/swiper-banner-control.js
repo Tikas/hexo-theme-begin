@@ -1,7 +1,8 @@
 var swiperBanner = new Swiper('.swiper-container', {
     slidesPerView: 1,
-    spaceBetween: 0,
+    spaceBetween: 30,
     slidesPerGroup: 1,
+    effect: "fade",
     loop: true,
     loopFillGroupWithBlank: false,
     speed: 750,

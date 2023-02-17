@@ -24,6 +24,8 @@ html(lang=config.language data-theme=theme.display_mode)
     if page.type !== '404'
       if (is_home()) && theme.banner.enable
         include ./_partial/banner.pug
+      else
+        .nav-height
 
       main
         if body

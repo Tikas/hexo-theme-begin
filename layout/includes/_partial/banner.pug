@@ -16,21 +16,7 @@
                     if item.introduce.button_title && item.introduce.button_url
                       a.button-solid.cta-blue(class=whiteTitle href=url_for(item.introduce.button_url))
                         !=item.introduce.button_title
-                        //- 按钮标题后面加 > 号，先使用文字解决
+                        //- 按钮标题后面加 > 号，先使用文字解决，以后换个按钮样式
 
     //- 画面底部显示进度
     .swiper-pagination
-
-    //- 两边的前后控件
-    //- .swiper-button.prev
-    //-   if theme.banner.prev_icon
-    //-     i.fa-fw(class=theme.banner.prev_icon)
-    //-   else
-    //-     svg(viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg')
-    //-       path(d='M15 6l-6 6l6 6' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-    //- .swiper-button.next
-    //-   if theme.banner.next_icon
-    //-     i.fa-fw(class=theme.banner.next_icon)
-    //-   else
-    //-     svg(viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg')
-    //-       path(d='M9 6l6 6l-6 6' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
