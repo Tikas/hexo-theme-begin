@@ -93,7 +93,7 @@ banner:
         button_title: 点击查看 >
         button_url: /
     #第三个轮播图
-    - img: https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp
+    - img: https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp
       mobile_img: https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp
       introduce:
         position: right
