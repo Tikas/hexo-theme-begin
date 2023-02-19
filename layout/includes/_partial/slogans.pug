@@ -1,8 +1,17 @@
 section.section#slogans
   .container
+    if theme.components.library.slogans.badge
+      span.section-badge=theme.components.library.slogans.badge
     h2.section-title
       each itemTitle in theme.components.library.slogans.title
         !=itemTitle
         span.br
-    each itemText in theme.components.library.slogans.subtitle
-      p.section-subtitle=itemText
+    p.section-subtitle
+      each itemText in theme.components.library.slogans.subtitle
+        !=itemText
+        span.br
+    if theme.components.library.slogans.button_title && theme.components.library.slogans.button_url
+      - let buttonStyle = theme.components.library.slogans.button_style ? 'button-' + theme.components.library.slogans.button_style : 'button-solid'
+      a.cta-blue(class=whiteTitle+' '+buttonStyle  href=url_for(theme.components.library.slogans.button_url))
+        !=theme.components.library.slogans.button_title
+        //- 按钮标题后面加 > 号，先使用文字解决，以后换个按钮样式

@@ -1,4 +1,4 @@
-- var buttonStyle = theme.banner.button_style ? 'button-' + theme.banner.button_style : 'button-solid'
+- let buttonStyle = theme.banner.button_style ? 'button-' + theme.banner.button_style : 'button-solid'
 
 #swiper
   .swiper-container
@@ -12,7 +12,7 @@
               .container.box
                 .introduce
                   div(class=item.introduce.position)
-                    - var whiteTitle = item.introduce.white_title ? 'font-white' : ''
+                    - let whiteTitle = item.introduce.white_title ? 'font-white' : ''
                     p.introduce-title(class=whiteTitle)=item.introduce.title
                     p.introduce-subtitle(class=whiteTitle)=item.introduce.subtitle
                     if item.introduce.button_title && item.introduce.button_url

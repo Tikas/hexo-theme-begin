@@ -114,6 +114,7 @@ components:
     # ----------------------------------- Library: Slogans ----------------------------------- > start
     # 网站的核心标语信息组件
     slogans:
+      badge: declaration #标语的徽标，为空不显示
       title:
         - Light tomorrow with today.
         - Time is that we do not come loose.
