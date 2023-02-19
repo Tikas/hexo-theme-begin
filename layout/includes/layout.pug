@@ -22,10 +22,14 @@ html(lang=config.language data-theme=theme.display_mode)
     include ./header/index.pug
 
     if page.type !== '404'
-      if (is_home()) && theme.banner.enable
-        include ./_partial/banner.pug
-      else
-        .nav-height
+      if (is_home())
+        //- 先判断是否开启 banner
+        if theme.banner.enable
+          include ./_partial/banner.pug
+        else
+          .nav-height
+        //- 加载首页的各板块
+        include ./_partial/components.pug
 
       main
         if body

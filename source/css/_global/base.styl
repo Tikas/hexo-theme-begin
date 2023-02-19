@@ -35,10 +35,18 @@ body
   font-family: $font-family
   line-height: inherit
 
+.br
+  &::before
+    content: '\a'
+    white-space: pre
+
 .container
   max-width: var(--global-container)
   margin: 0 auto
   padding: 0 40px
+
+.section
+  padding: 120px 0
 
 .nav-height
   height: 60px
@@ -167,8 +175,8 @@ body
   text-decoration: inherit
   display: inline-block
   text-align: center
-  font-weight: 600
-  padding: 6px 20px
+  font-weight: 400
+  padding: 8px 24px 6px
   border-radius: 99px
   letter-spacing: -.5px
   background: var(--button-background-color)

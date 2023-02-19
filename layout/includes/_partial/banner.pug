@@ -1,3 +1,5 @@
+- var buttonStyle = theme.banner.button_style ? 'button-' + theme.banner.button_style : 'button-solid'
+
 #swiper
   .swiper-container
     //- 这里为轮播图
@@ -14,7 +16,7 @@
                     p.introduce-title(class=whiteTitle)=item.introduce.title
                     p.introduce-subtitle(class=whiteTitle)=item.introduce.subtitle
                     if item.introduce.button_title && item.introduce.button_url
-                      a.button-solid.cta-blue(class=whiteTitle href=url_for(item.introduce.button_url))
+                      a.cta-blue(class=whiteTitle+' '+buttonStyle  href=url_for(item.introduce.button_url))
                         !=item.introduce.button_title
                         //- 按钮标题后面加 > 号，先使用文字解决，以后换个按钮样式
 

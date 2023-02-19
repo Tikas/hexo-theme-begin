@@ -60,8 +60,7 @@ banner:
   css: css/swiper.min.css #swiper css
   js: js/swiper.min.js #swiper js
   control: js/swiper-banner-control.js #配置 swiper 的声明文件
-  # prev_icon: #上一页的图标，如果不设置，则使用自带的 svg 样式
-  # next_icon: #下一页的图标，如果不设置，则使用自带的 svg 样式
+  button_style: solid #按钮的样式风格: solid
   wrapper:
     # #轮播图设置参数介绍
     # - img: /img.jpg #电脑端显示的图片
@@ -71,7 +70,7 @@ banner:
     #     title: Getting #介绍主标题
     #     subtitle: Wit once bought is worth twice taught #介绍的副标题内容
     #     white_title: false #标题的字体颜色是否为白色, false 为黑色, true 为白色
-    #     button_title: Read more > #介绍按钮的标题，同按钮链接一样，为空则不显示按钮
+    #     button_title: Read more > #介绍按钮的标题，同按钮链接一样，为空则不显示按钮，按钮样式请在 button_style 里修改
     #     button_url: / #介绍按钮的链接，同按钮标题一样，为空则不显示按钮
     #第一个轮播图
     - img: https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp
@@ -105,3 +104,26 @@ banner:
         button_url: /
 #如需要更多轮播图请自行复制上面的配置格式，注意缩进层次关系。
 ############################### Banner ############################### > end
+
+############################### Components ############################### > start
+components:
+  # 这里的组件只会显示在首页，按 for_home 里填写的组件名先后排序
+  for_home: [slogans] # 每个以英文的逗号分开
+  # 组件库
+  library:
+    # ----------------------------------- Library: Slogans ----------------------------------- > start
+    # 网站的核心标语信息组件
+    slogans:
+      title:
+        - Light tomorrow with today.
+        - Time is that we do not come loose.
+        # - 这是没有显示出来的第三行标题，支持多行标题，不建议超过三行
+      subtitle:
+        - A friend is one of the nicest things you can have, and one of the best things you can be.
+        - Friendship is a sheltering tree.
+        # - 这是没有显示出来的第三行内容文本，支持多行文本，不宜过多
+      button_style: solid #按钮的样式风格: solid
+      button_title: Read more > #介绍按钮的标题，同按钮链接一样，为空则不显示按钮
+      button_url: / #介绍按钮的链接，同按钮标题一样，为空则不显示按钮
+    # ----------------------------------- Library: Slogans ----------------------------------- > end
+############################### Components ############################### > end

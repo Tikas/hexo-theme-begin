@@ -1,0 +1,5 @@
+if theme.components.for_home.length > 0
+  each value in theme.components.for_home
+    //- 这里有没有更好的写法呢？
+    if value == 'slogans'
+      !=partial('includes/_partial/slogans', {}, {cache: true})

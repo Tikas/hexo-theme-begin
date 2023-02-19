@@ -1,0 +1,8 @@
+section.section#slogans
+  .container
+    h2.section-title
+      each itemTitle in theme.components.library.slogans.title
+        !=itemTitle
+        span.br
+    each itemText in theme.components.library.slogans.subtitle
+      p.section-subtitle=itemText
