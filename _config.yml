@@ -108,7 +108,7 @@ banner:
 ############################### Components ############################### > start
 components:
   # 这里的组件只会显示在首页，按 for_home 里填写的组件名先后排序
-  for_home: [slogans] # 每个以英文的逗号分开
+  for_home: [slogans, cards] # 每个以英文的逗号分开
   # 组件库
   library:
     # ----------------------------------- Library: Slogans ----------------------------------- > start
@@ -127,4 +127,31 @@ components:
       button_title: Read more > #介绍按钮的标题，同按钮链接一样，为空则不显示按钮
       button_url: / #介绍按钮的链接，同按钮标题一样，为空则不显示按钮
     # ----------------------------------- Library: Slogans ----------------------------------- > end
+
+    # ----------------------------------- Library: Cards ----------------------------------- > start
+    cards:
+      badge: strength #卡片的徽标，为空不显示
+      item:
+        # #cards组件的各卡片参数设置，建议 3-4 个卡片为佳，5 个以上会不显示
+        # - img: #卡片的背景图
+        #   category: #此内容的归类
+        #   title: #标题
+        #   link_text: 进一步了解 > #链接显示的文本
+        #   link_url: # 链接地址
+        - img: https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp
+          category: 测试测试
+          title: 如何打造出一个优雅的示例
+          link_text: 进一步了解 >
+          link_url: /
+        - img: https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/005.webp
+          category: test text
+          title: Time is that we do not come loose.
+          link_text: Read more >
+          link_url: /
+        - img: https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp
+          category: 还是测试
+          title: 生活就像一盒巧克力，你永远不知道下一个是什么
+          link_text: 点击查看 >
+          link_url: /
+    # ----------------------------------- Library: Cards ----------------------------------- > end
 ############################### Components ############################### > end

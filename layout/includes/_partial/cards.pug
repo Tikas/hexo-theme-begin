@@ -1,0 +1,14 @@
+section.section.cards
+  .container
+    if theme.components.library.cards.badge
+      span.section-badge=theme.components.library.cards.badge
+    .cards-layout
+      each item in theme.components.library.cards.item
+        section.cards-item
+          .card-box
+          a.card-link(href=url_for(item.link_url))
+            img.cards-img(src=url_for(item.img) alt=item.title)
+          .card-info
+            span.casrd-category=item.category
+            h3.card-title=item.title
+            a.card-link(href=url_for(item.link_url))=item.link_text

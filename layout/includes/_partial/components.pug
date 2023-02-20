@@ -3,3 +3,5 @@ if theme.components.for_home.length > 0
     //- 这里有没有更好的写法呢？
     if value == 'slogans'
       !=partial('includes/_partial/slogans', {}, {cache: true})
+    if value == 'cards'
+      !=partial('includes/_partial/cards', {}, {cache: true})
