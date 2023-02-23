@@ -1,0 +1,18 @@
+section.section
+  .container
+    .video-form
+      .video-left
+        video.video(poster=theme.components.library.video.poster controls prelaod='metadata')
+          source(src=theme.components.library.video.url type='video/mp4')
+      .video-right
+        h2.video-title=theme.components.library.video.title
+        ul.video-ul
+          each item in theme.components.library.video.info_item
+            li.videot-li
+              h3.video-info=item.title
+              p.video-p=item.text
+        if theme.components.library.video.button_title && theme.components.library.video.button_url
+          - let buttonStyle = theme.components.library.video.button_style ? 'button-' + theme.components.library.video.button_style : 'button-solid'
+          a.cta-blue(class=whiteTitle+' '+buttonStyle  href=url_for(theme.components.library.video.button_url))
+            !=theme.components.library.video.button_title
+            //- 按钮标题后面加 > 号，先使用文字解决，以后换个按钮样式

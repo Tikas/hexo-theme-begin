@@ -108,7 +108,7 @@ banner:
 ############################### Components ############################### > start
 components:
   # 这里的组件只会显示在首页，按 for_home 里填写的组件名先后排序
-  for_home: [slogans, cards] # 每个以英文的逗号分开
+  for_home: [slogans, cards, video] # 每个以英文的逗号分开
   # 组件库
   library:
     # ----------------------------------- Library: Slogans ----------------------------------- > start
@@ -124,7 +124,7 @@ components:
         - Friendship is a sheltering tree.
         # - 这是没有显示出来的第三行内容文本，支持多行文本，不宜过多
       button_style: solid #按钮的样式风格: solid
-      button_title: Read more > #介绍按钮的标题，同按钮链接一样，为空则不显示按钮
+      button_title: Learn more > #介绍按钮的标题，同按钮链接一样，为空则不显示按钮
       button_url: / #介绍按钮的链接，同按钮标题一样，为空则不显示按钮
     # ----------------------------------- Library: Slogans ----------------------------------- > end
 
@@ -154,4 +154,21 @@ components:
           link_text: 点击查看 >
           link_url: /
     # ----------------------------------- Library: Cards ----------------------------------- > end
+
+    # ----------------------------------- Library: Video ----------------------------------- > start
+    video:
+      poster: https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp #视频的封面图片
+      url: https://github.com/volantis-x/volantis-docs/releases/download/assets/IMG_0341.mov #视频地址
+      title: Xaoxuu's cat
+      info_item:
+        - title: Elegant figure
+          text: elegant figure, very flexible
+        - title: Explosive force
+          text: small body with incredible energy
+        - title: Have fun
+          text: keep a happy heart very good
+      button_style: solid #按钮的样式风格: solid
+      button_title: Learn more > #介绍按钮的标题，同按钮链接一样，为空则不显示按钮
+      button_url: / #介绍按钮的链接，同按钮标题一样，为空则不显示按钮
+    # ----------------------------------- Library: Video ----------------------------------- > end
 ############################### Components ############################### > end
