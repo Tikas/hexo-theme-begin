@@ -22,7 +22,7 @@ html(lang=config.language data-theme=theme.display_mode)
     include ./header/index.pug
 
     if page.type !== '404'
-      if (is_home())
+      if (is_home() && page.prev == 0)
         //- 先判断是否开启 banner
         if theme.banner.enable
           include ./_partial/banner.pug
