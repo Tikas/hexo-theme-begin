@@ -111,7 +111,7 @@ components:
   for_home: [slogans, cards, video] # 每个以英文的逗号分开
   # 组件库
   library:
-    # ----------------------------------- Library: Slogans ----------------------------------- > start
+    # --------------------------- Components -> Library -> Slogans --------------------------- > start
     # 网站的核心标语信息组件
     slogans:
       badge: declaration #标语的徽标，为空不显示
@@ -126,9 +126,9 @@ components:
       button_style: solid #按钮的样式风格: solid
       button_title: Learn more > #介绍按钮的标题，同按钮链接一样，为空则不显示按钮
       button_url: / #介绍按钮的链接，同按钮标题一样，为空则不显示按钮
-    # ----------------------------------- Library: Slogans ----------------------------------- > end
+    # --------------------------- Components -> Library -> Slogans --------------------------- > end
 
-    # ----------------------------------- Library: Cards ----------------------------------- > start
+    # --------------------------- Components -> Library -> Cards --------------------------- > start
     cards:
       badge: strength #卡片的徽标，为空不显示
       item:
@@ -153,9 +153,9 @@ components:
           title: 生活就像一盒巧克力，你永远不知道下一个是什么
           link_text: 点击查看 >
           link_url: /
-    # ----------------------------------- Library: Cards ----------------------------------- > end
+    # --------------------------- Components -> Library -> Cards --------------------------- > end
 
-    # ----------------------------------- Library: Video ----------------------------------- > start
+    # --------------------------- Components -> Library -> Video --------------------------- > start
     video:
       poster: https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp #视频的封面图片
       url: https://github.com/volantis-x/volantis-docs/releases/download/assets/IMG_0341.mov #视频地址
@@ -170,5 +170,28 @@ components:
       button_style: solid #按钮的样式风格: solid
       button_title: Learn more > #介绍按钮的标题，同按钮链接一样，为空则不显示按钮
       button_url: / #介绍按钮的链接，同按钮标题一样，为空则不显示按钮
-    # ----------------------------------- Library: Video ----------------------------------- > end
+    # --------------------------- Components -> Library -> Video --------------------------- > end
+
+    # --------------------------- Components -> Library -> Posts --------------------------- > start
+    posts:
+      display: true #是否在首页显示文章列表，设置 false 则不显示，以下设置都不会生效
+      default: false #如果为 true 则显示默认的文章列表，以下个性化设置则无效
+      #recent_post 最近的文章
+      recent_post:
+        enable: true #开启最近文章显示，设置 false 为不启用
+        title: Recent Articles
+        count: 2 #显示多少篇文章，由于是双排显示，建议是 2 的倍数
+        button_style: solid #按钮的样式风格: solid
+        button_title: VIEW ALL #介绍按钮的标题，同按钮链接一样，为空则不显示按钮
+        button_url: / #介绍按钮的链接，同按钮标题一样，为空则不显示按钮
+      #recent_item 最近的物品，如需要开启，请先在 source 目录里创建 item 文件夹
+      #在 source/item/ 目录内添加产品的 markdown 文档即可
+      recent_item:
+        enable: true
+        title: Choose your product
+        count: 2 #显示多少篇文章，由于是三排显示，建议是 3 的倍数
+        button_style: solid
+        button_title: VIEW ALL
+        button_url: /
+    # --------------------------- Components -> Library -> Recent Posts --------------------------- > end
 ############################### Components ############################### > end
